@@ -41,10 +41,15 @@ class _HomeState extends State<Home> {
     return Scaffold(
         appBar: AppBar(
           title: Text("REGISTER"),
-          backgroundColor: Colors.black38,
+          backgroundColor: Colors.black,
         ),
         body: Container(
-          color: Colors.grey,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("assets/images/backg.png"),
+              fit: BoxFit.cover,
+            ),
+          ),
           padding: EdgeInsets.all(20),
           child: ListView(
             children: [
@@ -58,7 +63,7 @@ class _HomeState extends State<Home> {
                   decoration: InputDecoration(
                     labelText: "Username",
                     labelStyle: TextStyle(color: Colors.white),
-                    prefixIcon: Icon(Icons.person),
+                    prefixIcon: Icon(Icons.person, color: Colors.white),
                     border: myinputborder(),
                     enabledBorder: myinputborder(),
                     focusedBorder: myfocusborder(),
@@ -69,7 +74,7 @@ class _HomeState extends State<Home> {
                   decoration: InputDecoration(
                     labelText: "Email Address",
                     labelStyle: TextStyle(color: Colors.white),
-                    prefixIcon: Icon(Icons.email),
+                    prefixIcon: Icon(Icons.email, color: Colors.white),
                     border: myinputborder(),
                     enabledBorder: myinputborder(),
                     focusedBorder: myfocusborder(),
@@ -80,7 +85,7 @@ class _HomeState extends State<Home> {
                   decoration: InputDecoration(
                     labelText: "Password",
                     labelStyle: TextStyle(color: Colors.white),
-                    prefixIcon: Icon(Icons.lock),
+                    prefixIcon: Icon(Icons.lock, color: Colors.white),
                     border: myinputborder(),
                     enabledBorder: myinputborder(),
                     focusedBorder: myfocusborder(),
@@ -91,7 +96,7 @@ class _HomeState extends State<Home> {
                   decoration: InputDecoration(
                     labelText: "Confirm Password",
                     labelStyle: TextStyle(color: Colors.white),
-                    prefixIcon: Icon(Icons.lock),
+                    prefixIcon: Icon(Icons.lock, color: Colors.white),
                     border: myinputborder(),
                     enabledBorder: myinputborder(),
                     focusedBorder: myfocusborder(),
@@ -100,7 +105,7 @@ class _HomeState extends State<Home> {
               TextField(
                   controller: mobile,
                   decoration: InputDecoration(
-                    prefixIcon: Icon(Icons.phone),
+                    prefixIcon: Icon(Icons.phone, color: Colors.white),
                     labelText: "Mobile",
                     labelStyle: TextStyle(color: Colors.white),
                     enabledBorder: myinputborder(),
@@ -111,11 +116,11 @@ class _HomeState extends State<Home> {
                 child: TextButton(
                   child: Text(
                     "REGISTER",
-                    style: TextStyle(fontSize: 20, color: Colors.black45),
+                    style: TextStyle(fontSize: 25, color: Colors.black45),
                   ),
                   style: TextButton.styleFrom(
                     primary: Colors.white,
-                    backgroundColor: Colors.black26,
+                    backgroundColor: Colors.white,
                   ),
                   onPressed: () {},
                 ),
@@ -124,7 +129,7 @@ class _HomeState extends State<Home> {
                 alignment: Alignment.centerRight,
                 child: Text(
                   "Already have an Account ?",
-                  style: TextStyle(fontSize: 16, color: Colors.white),
+                  style: TextStyle(fontSize: 20, color: Colors.white),
                 ),
               ),
               Container(
@@ -133,7 +138,7 @@ class _HomeState extends State<Home> {
                   "Login",
                   style: TextStyle(
                     fontSize: 18,
-                    color: Colors.black45,
+                    color: Colors.white,
                   ),
                 ),
               ),
